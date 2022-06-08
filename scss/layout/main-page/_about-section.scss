@@ -47,5 +47,12 @@
         &:first-child {
             font-weight: bold;
         }
+
+        @include respond(mini-desktop) {
+            line-height: 5rem;
+            font-size: 5rem;
+            border-inline-end: 0;
+            // margin-block-end: 1rem;
+        }
     }
 }
