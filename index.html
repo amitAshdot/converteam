@@ -46,12 +46,12 @@
         <div class="top-left">
             <div class="top-left-item">
                 <a href="https://www.facebook.com/targetcall.co.il/">
-                    <img src="./images/facebook.svg" alt="פייסבוק-אייקון" class="facebook-icon" width="" height="">
+                    <img src="./images/facebook.webp" alt="פייסבוק-אייקון" class="facebook-icon" width="" height="">
                 </a>
             </div>
             <div class="top-left-item">
                 <a href="https://www.instagram.com/targetcall.co.il/">
-                    <img src="./images/instagram.svg" alt="אינסטגרם-אייקון" class="instagram-icon" width="" height="">
+                    <img src="./images/insta.webp" alt="אינסטגרם-אייקון" class="instagram-icon" width="" height="">
                 </a>
             </div>
         </div>
@@ -187,19 +187,19 @@
 
         <div class="cta-container">
             <img src="./images/cta-bg.png" alt="תמונת רקע" class="cta-image-1 cta-bg" width="" height="">
-            <form class="cta-form show-on-scroll">
+            <form class="cta-form show-on-scroll" id="form" action="mail.php">
                 <div class="cta-form-inputs">
                     <!-- <div class="cta-form-input"> -->
-                    <input type="text" class="cta-input" placeholder="שם מלא">
+                    <input type="text" class="cta-input" placeholder="שם מלא" name="name" id="name">
                     <!-- </div> -->
                     <!-- <div class="cta-form-input"> -->
-                    <input type="tel" class="cta-input" placeholder="טלפון">
+                    <input type="tel" class="cta-input" placeholder="טלפון" name="phone" id="phone">
                     <!-- </div> -->
                     <!-- <div class="cta-form-input"> -->
-                    <input type="email" class="cta-input" placeholder="אימייל">
+                    <input type="text" class="cta-input" placeholder="אימייל" name="email" id="email">
                     <!-- </div> -->
                     <!-- <div class="cta-form-input"> -->
-                    <input type="text" class="cta-input" placeholder="תחום עיסוק">
+                    <input type="text" class="cta-input" placeholder="תחום עיסוק" name="buss" id="buss">
                     <!-- </div> -->
                     <!-- <div class="cta-form-input"> -->
                     <select class="cta-input select" name="area" id="area">
@@ -217,6 +217,10 @@
                     <!-- </div> -->
                 </div>
             </form>
+            <p class="cta-message" id="message">
+                <!-- <p class="message-text">
+                </p> -->
+            </p>
         </div>
     </section>
     <!-- CTA SECTION END-->
@@ -256,6 +260,8 @@
                 header.classList.remove("sticky");
             }
         }
+
+
     </script>
 </body>
 

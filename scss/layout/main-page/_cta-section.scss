@@ -107,6 +107,11 @@
                 outline: none;
             }
         }
+
+        &.error {
+            border: 2px solid $error-border;
+            background: $error-bg;
+        }
     }
 
     &-submit {
@@ -129,6 +134,34 @@
             padding-inline-start: 3rem;
             padding-inline-end: 3rem;
             margin-block-start: 2rem;
+        }
+    }
+
+    &-message {
+        opacity: 0;
+        width: 100%;
+        margin-block-start: 1rem;
+        margin-block-end: 1rem;
+        text-align: center;
+
+        transition: all 0.3s;
+
+        @include respond(mini-desktop) {
+            font-size: 3.9rem;
+            width: 100%;
+            margin-block-start: 2rem;
+            margin-block-end: 2rem;
+        }
+
+        &.error {
+            opacity: 1;
+            border: 2px solid $error-border;
+            background: $error-bg;
+            text-align: center;
+            border-radius: 20px;
+            padding: 2rem;
+            margin-top: 1rem;
+            line-height: initial;
         }
     }
 }
