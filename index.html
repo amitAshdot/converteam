@@ -17,8 +17,8 @@
         onload="this.rel = 'stylesheet'"
        type="text/css"   href="./css/index.css" -->
 
-    <link rel="preload" as="font" href="https://amitashdot.github.io/targetCall-landing/fonts/ploni-regular-aaa.otf"
-        type="font/otf" crossorigin="anonymous">
+    <!-- <link rel="preload" as="font" href="https://amitashdot.github.io/targetCall-landing/fonts/ploni-regular-aaa.otf"
+        type="font/otf" crossorigin="anonymous"> -->
 
     <!-- Accept-Encoding: gzip, deflate -->
     <!-- PWA     -->
@@ -188,24 +188,16 @@
 
         <div class="cta-container">
             <img src="./images/cta-bg.png" alt="תמונת רקע" class="cta-image-1 cta-bg" width="" height="">
-            <form class="cta-form show-on-scroll" id="form" action="mail.php" method="post"
-                onsubmit="return submitForm();">
+            <form class="cta-form show-on-scroll" id="form" action="mail.php" method="post">
                 <div class=" cta-form-inputs">
-                    <!-- <div class="cta-form-input"> -->
+
                     <input type="text" class="cta-input" placeholder="שם מלא" name="name" id="name">
-                    <!-- </div> -->
-                    <!-- <div class="cta-form-input"> -->
                     <input type="tel" class="cta-input" placeholder="טלפון" name="phone" id="phone">
-                    <!-- </div> -->
-                    <!-- <div class="cta-form-input"> -->
                     <input type="text" class="cta-input" placeholder="אימייל" name="email" id="email">
-                    <!-- </div> -->
-                    <!-- <div class="cta-form-input"> -->
                     <input type="text" class="cta-input" placeholder="תחום עיסוק" name="buss" id="buss">
-                    <!-- </div> -->
-                    <!-- <div class="cta-form-input"> -->
                     <select class="cta-input select" name="area" id="area">
                         <!-- <optgroup label="איזור השרון"> -->
+                        <option value="">בחר/י איזור</option>
                         <option value="volvo">צפון</option>
                         <option value="saab">מרכז</option>
                         <option value="mercedes">דרום</option>
@@ -213,16 +205,10 @@
                         <!-- <optgroup label="איזור הבקעה"> -->
                         <!-- </optgroup> -->
                     </select>
-                    <!-- </div> -->
-                    <!-- <div class="cta-form-input"> -->
                     <button type="submit" class="cta-submit btn">חזרו אליי</button>
-                    <!-- </div> -->
                 </div>
             </form>
-            <p class="cta-message" id="message">
-                <!-- <p class="message-text">
-                </p> -->
-            </p>
+            <p class="cta-message" id="message"></p>
         </div>
     </section>
     <!-- CTA SECTION END-->
@@ -243,7 +229,8 @@
     <script async src="./js/lazysizes.min.js" ></script>
     <script defer type="text/javascript" src="./js/formHandle.js"></script> -->
     <script defer type="text/javascript" src="./js/scripts.js"></script>
-    <script defer type="text/javascript" src="./dist/main.js"></script>
+    <script defer type="text/javascript" src="./js/jquery3.6.0.min.js"></script>
+    <!-- <script defer type="text/javascript" src="./dist/main.js"></script> -->
 
 
     <script>

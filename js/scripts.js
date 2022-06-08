@@ -5,14 +5,11 @@ document.addEventListener("DOMContentLoaded", function () {
     let viewPortWidth = window.innerWidth
     let sticky = viewPortWidth * 0.011111 * 5;//5% of the viewport width
     const setFixed = () => {
-        console.log(window.pageYOffset)
-        if (window.pageYOffset > sticky) {
+        if (window.pageYOffset > sticky)
             header.classList.add("sticky");
-        } else {
+        else
             header.classList.remove("sticky");
-        }
     }
-
 
     // -----START IS ON SCREEN-----
     // Helper function from: http://stackoverflow.com/a/7557433/274826
@@ -51,7 +48,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 element.classList.remove("is-visible");
             }
         });
-
         scroll(loop);
     };
 
@@ -78,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     siteArray.map(item => (item.value = site));
     fromArray.map(item => (item.value = from));
     // -----END URL PARAMS-----
-
+    // -----START EMAIL VALIDATION-----
     const isNumberKey = (evt) => {
         let charCode = (evt.which) ? evt.which : evt.keyCode
         if (charCode > 31 && (charCode < 48 || charCode > 57))
@@ -101,21 +97,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const validateForm = () => {
-        let flag = false
-        let name = document.getElementById("name");
-        let email = document.getElementById("email")
-        let phone = document.getElementById("phone")
-        let buss = document.getElementById("buss")
-        let area = document.getElementById("area")
-        let message = document.getElementById("message")
-
-        name.classList.remove("error")
-        email.classList.remove("error")
-        phone.classList.remove("error")
-        buss.classList.remove("error")
-        area.classList.remove("error")
-        message.classList.remove("error")
-        if (name.value === "" || name.value.length < 2) {
+        let flag = false, name = document.getElementById("name"), email = document.getElementById("email"),
+            phone = document.getElementById("phone"), buss = document.getElementById("buss"),
+            area = document.getElementById("area"), message = document.getElementById("message");
+        if (name.value.length < 2) {
             name.classList.add("error");
             flag = true;
         }
@@ -143,48 +128,12 @@ document.addEventListener("DOMContentLoaded", function () {
     }
     const submitForm = (e) => {
         if (validateForm()) {
-            // document.getElementById("form").submit();
             return true
-            // e.preventDefault();
-            // debugger
-            // let form = document.getElementById("form");
-            // let formData = new FormData(form);
-            // let xhr = new XMLHttpRequest();
-            // xhr.open("POST", "../mail.php");
-            // xhr.send(formData);
-            // xhr.onload = function () {
-            //     if (xhr.status === 200) {
-            //         console.log("success");
-            //     } else {
-            //         console.log("error");
-            //     }
-            // };
-            // xhr.onerror = function () {
-            //     console.log("error");
-            // };
-            // xhr.onprogress = function () {
-            //     console.log("progress");
-            // };
-            // xhr.ontimeout = function () {
-            //     console.log("timeout");
-            // };
-            // xhr.onabort = function () {
-            //     console.log("abort");
-            // };
-
-
-            // var data = $(this).serialize();
-            // $.ajax({
-            //     type: "POST",
-            //     url: './mail.php',
-            //     data: data,
-            //     success: function (mail) {
-            //         window.location.href = 'thankyou.html';
-            //     }
-            // });
         } else {
             e.preventDefault();
+            return false
         }
     }
     document.getElementById("form").addEventListener("submit", submitForm);
+    // -----END EMAIL VALIDATION-----
 });
