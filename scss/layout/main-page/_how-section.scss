@@ -79,6 +79,7 @@
         }
 
         &-text {
+            margin-block-start: 1rem;
             // font-size: 1.5rem;
         }
 
@@ -97,6 +98,6 @@
 }
 
 .arrow-image {
-    width: 7rem;
+    width: 3rem;
     filter: invert(1);
 }
