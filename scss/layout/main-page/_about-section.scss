@@ -43,10 +43,11 @@
         }
     }
 
-    &-description {}
+    &-description {
+        border-inline-end: 0.5rem solid $color-primary;
+    }
 
     &-text {
-        border-inline-end: 0.5rem solid $color-primary;
         font-size: 1.5rem;
         line-height: 2rem;
         padding-block-end: 2rem;

@@ -14,7 +14,7 @@
 
         border-bottom: 0px solid black;
         box-shadow: 0;
-        position: relative;
+        position: sticky;
         z-index: 1;
 
         @include respond(mini-desktop) {

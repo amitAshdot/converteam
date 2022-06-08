@@ -1,4 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // When the user scrolls the page, execute myFunction
+    window.onscroll = function () { setFixed() };
+    let header = document.getElementById("header");
+    let viewPortWidth = window.innerWidth
+    let sticky = viewPortWidth * 0.011111 * 5;//5% of the viewport width
+    const setFixed = () => {
+        console.log(window.pageYOffset)
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+
 
     // -----START IS ON SCREEN-----
     // Helper function from: http://stackoverflow.com/a/7557433/274826
@@ -130,33 +144,33 @@ document.addEventListener("DOMContentLoaded", function () {
     const submitForm = (e) => {
         if (validateForm()) {
             // document.getElementById("form").submit();
-
-            e.preventDefault();
-            debugger
-            let form = document.getElementById("form");
-            let formData = new FormData(form);
-            let xhr = new XMLHttpRequest();
-            xhr.open("POST", "../mail.php");
-            xhr.send(formData);
-            xhr.onload = function () {
-                if (xhr.status === 200) {
-                    console.log("success");
-                } else {
-                    console.log("error");
-                }
-            };
-            xhr.onerror = function () {
-                console.log("error");
-            };
-            xhr.onprogress = function () {
-                console.log("progress");
-            };
-            xhr.ontimeout = function () {
-                console.log("timeout");
-            };
-            xhr.onabort = function () {
-                console.log("abort");
-            };
+            return true
+            // e.preventDefault();
+            // debugger
+            // let form = document.getElementById("form");
+            // let formData = new FormData(form);
+            // let xhr = new XMLHttpRequest();
+            // xhr.open("POST", "../mail.php");
+            // xhr.send(formData);
+            // xhr.onload = function () {
+            //     if (xhr.status === 200) {
+            //         console.log("success");
+            //     } else {
+            //         console.log("error");
+            //     }
+            // };
+            // xhr.onerror = function () {
+            //     console.log("error");
+            // };
+            // xhr.onprogress = function () {
+            //     console.log("progress");
+            // };
+            // xhr.ontimeout = function () {
+            //     console.log("timeout");
+            // };
+            // xhr.onabort = function () {
+            //     console.log("abort");
+            // };
 
 
             // var data = $(this).serialize();

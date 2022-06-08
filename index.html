@@ -69,7 +69,8 @@
             <h2 class="join-subtitle show-on-scroll">מצטרפים בקלות ובפשטות לאפליקציית Converteam ונהנים מעמלות עבור
                 הפניות</h2>
             <!-- <div class="join-button-container "> -->
-            <a href="/#form" class="join-button btn show-on-scroll">להצטרפות</a>
+            <a href="javascript: void(0)" onclick="moveTo()" id="join"
+                class="join-button btn show-on-scroll">להצטרפות</a>
             <!-- </div> -->
         </div>
     </section>
@@ -182,13 +183,14 @@
     </section>
     <!-- ABOUT SECTION END-->
     <!-- CTA SECTION START-->
-    <section class="cta-section">
+    <section class="cta-section" id="cta">
         <h3 class="cta-title show-on-scroll">הצטרפו עכשיו!</h3>
 
         <div class="cta-container">
             <img src="./images/cta-bg.png" alt="תמונת רקע" class="cta-image-1 cta-bg" width="" height="">
-            <form class="cta-form show-on-scroll" id="form" action="mail.php">
-                <div class="cta-form-inputs">
+            <form class="cta-form show-on-scroll" id="form" action="mail.php" method="post"
+                onsubmit="return submitForm();">
+                <div class=" cta-form-inputs">
                     <!-- <div class="cta-form-input"> -->
                     <input type="text" class="cta-input" placeholder="שם מלא" name="name" id="name">
                     <!-- </div> -->
@@ -245,23 +247,7 @@
 
 
     <script>
-        // When the user scrolls the page, execute myFunction
-        window.onscroll = function () { setFixed() };
-        // Get the header
-        let header = document.getElementById("header");
-        let viewPortWidth = window.innerWidth
-        let sticky = viewPortWidth * 0.011111 * 5;//5% of the viewport width
-
-        // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-        function setFixed() {
-            if (window.pageYOffset > sticky) {
-                header.classList.add("sticky");
-            } else {
-                header.classList.remove("sticky");
-            }
-        }
-
-
+        function moveTo(event) { window.scrollTo(0, document.body.scrollHeight); }
     </script>
 </body>
 
