@@ -87,7 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const validateForm = () => {
-        debugger
         let flag = false
         let name = document.getElementById("name");
         let email = document.getElementById("email")
@@ -171,7 +170,6 @@ document.addEventListener("DOMContentLoaded", function () {
             // });
         } else {
             e.preventDefault();
-            alert("Please fill out the form correctly");
         }
     }
     document.getElementById("form").addEventListener("submit", submitForm);
