@@ -1,0 +1,17 @@
+@import "abstract/mixins";
+@import "abstract/variables";
+
+@import "base/animations";
+@import "base/base";
+@import "base/typogrophy";
+@import "base/accessibility";
+@import "base/utilities";
+
+@import "layout/main-page/top-section";
+@import "layout/main-page/join-section";
+@import "layout/main-page/how-section";
+@import "layout/main-page/why-section";
+@import "layout/main-page/about-section";
+@import "layout/main-page/cta-section";
+@import "layout/main-page/footer-section";
+@import "layout/thank-you-page";

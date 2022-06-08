@@ -1,0 +1,51 @@
+.about {
+    &-section {
+        position: relative;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: flex-start;
+        justify-content: center;
+        // align-items: center;
+        padding-block-start: 4rem;
+        padding-block-end: 4rem;
+        padding-inline-start: 7rem;
+        padding-inline-end: 7rem;
+
+        // border: 1px solid red;
+
+        @include respond(mini-desktop) {
+            flex-direction: column;
+            padding-inline: 2.5rem;
+            padding-block-end: 4rem;
+            height: auto;
+        }
+    }
+
+    &-title {
+        color: $color-black;
+        text-align: right;
+        line-height: 4.1rem;
+        font-size: 4.1rem;
+        width: 57%;
+        padding-inline-start: 1rem;
+
+        @include respond(mini-desktop) {
+            line-height: 6.8rem;
+            font-size: 6.8rem;
+            margin-block-end: 1rem;
+        }
+    }
+
+    &-description {}
+
+    &-text {
+        border-inline-end: 0.5rem solid $color-primary;
+        font-size: 1.5rem;
+        line-height: 2rem;
+        padding-block-end: 2rem;
+
+        &:first-child {
+            font-weight: bold;
+        }
+    }
+}

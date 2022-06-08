@@ -1,0 +1,80 @@
+.why {
+    &-section {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-block-start: 12rem;
+        padding-block-end: 4rem;
+        padding-inline-start: 7rem;
+        padding-inline-end: 7rem;
+        // height: 5rem;
+        //    justify-content: space-between;
+        //    padding-inline-end: 14.5rem;
+
+        // border: 1px solid green;
+
+        @include respond(mini-desktop) {
+            flex-direction: column;
+        }
+    }
+
+    &-title {
+        color: $color-primary;
+        line-height: 4.2rem;
+        font-size: 4.1rem;
+        width: 25%;
+
+        @include respond(mini-desktop) {
+            line-height: 6.8rem;
+            font-size: 6.8rem;
+            margin-block-end: 1rem;
+        }
+    }
+
+    &-list {
+        display: flex;
+        // flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-around;
+        padding-inline-start: 1rem;
+        border-inline-start: 0.5rem solid $color-primary;
+    }
+
+    &-item {
+        display: flex;
+        gap: 1.5rem;
+        flex-direction: column;
+        width: 45%;
+        // border: 1px solid;
+        text-align: center;
+        padding-block-start: 0;
+        padding-block-end: 0;
+        padding-inline-start: 1rem;
+        padding-inline-end: 1rem;
+
+        &-image {
+            align-self: center;
+            width: 2rem;
+            height: 3rem;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+
+        // flex-direction: column;
+        @include respond(mini-desktop) {
+            flex-direction: column;
+            align-items: center;
+
+            &>p {
+                font-size: 0.9rem;
+                line-height: 1rem;
+                text-align: center;
+            }
+        }
+    }
+}

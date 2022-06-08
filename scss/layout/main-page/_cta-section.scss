@@ -1,0 +1,84 @@
+.cta {
+    &-section {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-block-start: 4rem;
+        padding-block-end: 4rem;
+        padding-inline-start: 7rem;
+        padding-inline-end: 7rem;
+        overflow: visible;
+        // border: 1px solid blue;
+    }
+
+    &-image-1 {
+        position: absolute;
+        width: 26rem;
+        top: -4rem;
+        right: -2rem;
+        z-index: -1;
+    }
+
+    &-container {
+        width: 100%;
+    }
+
+    &-title {
+        color: $color-primary;
+        width: 19.8%;
+        line-height: 4.1rem;
+        font-size: 4.1rem;
+    }
+
+    &-form {
+        padding-inline-start: 1rem;
+        border-inline-start: 0.5rem solid $color-primary;
+
+        &-inputs {
+            display: flex;
+            justify-content: start;
+            flex-wrap: wrap;
+            align-items: center;
+            width: 100%;
+            margin-block-end: 1rem;
+        }
+    }
+
+    &-input {
+        font-size: 0.9rem;
+        width: 21rem;
+        padding-inline-start: 1rem;
+        padding-inline-end: 1rem;
+        margin-block-end: 1rem;
+        margin-inline-end: 1rem;
+
+        height: 3.2rem;
+        border-radius: 31px;
+        // background-color: #ffffff;
+        border: 2px solid #000000;
+
+        &.select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: left 1rem center;
+            background-size: 1em;
+
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+
+    &-submit {
+        @include global-btn($color-black, $color-primary, $color-primary);
+        width: 11rem;
+        height: 3.2rem;
+        margin-block-end: 1rem;
+        margin-inline-start: auto;
+        margin-inline-end: 1.7rem;
+        border-radius: 31px;
+        background-color: $color-primary;
+    }
+}

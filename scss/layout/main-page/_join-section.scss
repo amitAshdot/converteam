@@ -1,0 +1,114 @@
+       .join {
+           &-section {
+               position: relative;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               padding-block-start: 4rem;
+               padding-block-end: 12rem;
+               padding-inline-start: 7rem;
+               padding-inline-end: 7rem;
+               background-color: $color-primary;
+               //    height: 21vw;
+               // height: 5rem;
+               //    justify-content: space-between;
+               //    padding-inline-end: 14.5rem;
+
+               //    border: 1px solid green;
+           }
+
+           &-image {
+               &-1 {
+                   left: -3%;
+                   top: -10%;
+                   width: 38rem;
+               }
+
+               &-2 {
+                   top: -34%;
+                   right: -2%;
+                   transform: rotate(121deg);
+                   width: 20rem;
+               }
+           }
+
+           &-bg {
+               position: absolute;
+               filter: opacity(0.2) brightness(0) invert(1);
+           }
+
+           &-info {
+               position: relative;
+               display: flex;
+               flex-direction: column;
+               justify-content: center;
+               align-items: center;
+               height: 100%;
+           }
+
+           &-title {
+               color: $color-black;
+               line-height: 3.1rem;
+               font-size: 3.2rem;
+               width: fit-content;
+
+               @include respond(mini-desktop) {
+                   line-height: 6.8rem;
+                   font-size: 6.8rem;
+                   margin-block-end: 1rem;
+               }
+           }
+
+           &-subtitle {
+               color: $color-black;
+               margin-block-end: 1rem;
+               font-size: 1.2rem;
+               line-height: 2.5rem;
+               width: fit-content;
+
+               @include respond(mini-desktop) {
+                   margin-block-end: 1rem;
+                   font-size: 3rem;
+                   line-height: 3.3rem;
+                   margin-block-end: 2.7rem;
+                   text-align: center;
+                   padding-inline: 7rem;
+               }
+
+           }
+
+           &-button {
+               &-container {
+                   //    position: relative;
+                   //    display: flex;
+                   //    justify-content: center;
+                   //    align-items: center;
+                   //    width: fit-content;
+
+                   width: 16rem;
+                   height: 3.5rem;
+
+                   & a {
+                       font-size: 1.2rem;
+                   }
+               }
+
+               @include global-btn($color-black, $color-primary, $color-white);
+
+               font-size: 1.45rem;
+               border-radius: 10rem;
+               font-family: 'adoveFnt22',
+               sans-serif;
+               display: flex;
+               justify-content: center;
+               width: 16rem;
+               height: 3rem;
+
+               @include respond(mini-desktop) {
+                   width: 33rem;
+                   height: 7rem;
+                   font-size: 3rem;
+               }
+
+           }
+       }

@@ -1,0 +1,102 @@
+.top {
+    &-section {
+        display: flex;
+        // align-items: center;
+        height: $top-section-height;
+        justify-content: space-between;
+        // padding-block-start: 1.5rem;
+        // padding-block-start: 1.5rem;
+        padding-inline-start: 14.5rem;
+        padding-inline-end: 14.5rem;
+        background-color: $color-white;
+        // border: 1px solid red;
+
+        animation: moveInTopFull 0.3s ease-in-out;
+
+        transition: 0.3s all;
+
+        border-bottom: 0px solid black;
+        box-shadow: 0;
+        position: relative;
+        z-index: 1;
+
+        @include respond(mini-desktop) {
+            // flex-direction: column;
+            // padding-inline: 2.5rem;
+            // padding-block-end: 4rem;
+            // height: auto;
+        }
+
+        &.sticky {
+            position: fixed;
+            top: 0;
+            right: 0;
+            z-index: 2;
+            width: 100%;
+            height: $top-section-height;
+            box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.16);
+            // border-bottom: 1px solid black;
+
+            animation: moveInBottomFull 0.3s ease-in-out;
+            transition: 0.3s all;
+
+            &~.join-section {
+                margin-block-start: $top-section-height;
+            }
+        }
+    }
+
+    &-right {
+        position: relative;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+
+        @include respond(mini-desktop) {}
+
+        &-item {
+            width: 7.7rem;
+            height: auto;
+            aspect-ratio: 4.774;
+            margin-block-end: 0.8rem;
+            // margin-block-start: 4rem;
+
+            @include respond(mini-desktop) {
+                width: 14.5rem;
+                height: auto;
+                aspect-ratio: 4.774;
+                margin-block-end: 2.4rem;
+            }
+        }
+
+        &-logo {
+            &-img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+
+        }
+
+    }
+
+    &-left {
+        position: relative;
+        display: flex;
+
+        @include respond(mini-desktop) {}
+
+        &-item {
+            width: 3rem;
+            height: 3rem;
+
+            & a {
+                & img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,21 @@
+.u-hidden {
+  display: none !important;
+
+}
+
+.u-desktop {
+  display: block;
+
+  @include respond(mini-desktop) {
+    display: none;
+
+  }
+}
+
+.u-mobile {
+  display: none;
+
+  @include respond(mini-desktop) {
+    display: block;
+  }
+}
