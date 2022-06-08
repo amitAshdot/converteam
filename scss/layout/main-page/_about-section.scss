@@ -15,8 +15,9 @@
 
         @include respond(mini-desktop) {
             flex-direction: column;
-            padding-inline: 2.5rem;
             padding-block-end: 4rem;
+            padding-inline-start: 5rem;
+            padding-inline-end: 5rem;
             height: auto;
         }
     }
@@ -30,9 +31,15 @@
         padding-inline-start: 1rem;
 
         @include respond(mini-desktop) {
+            text-align: center;
             line-height: 6.8rem;
             font-size: 6.8rem;
+            width: 100%;
             margin-block-end: 1rem;
+            padding-inline-start: 15rem;
+            padding-inline-end: 15rem;
+            padding-block-end: 8rem;
+            padding-block-end: 8rem;
         }
     }
 

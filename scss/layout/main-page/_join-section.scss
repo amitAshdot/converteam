@@ -11,8 +11,8 @@
                background-color: $color-primary;
 
                @include respond(mini-desktop) {
-                   padding-block-start: 5rem;
-                   padding-block-end: 5rem;
+                   padding-block-start: 10rem;
+                   padding-block-end: 10rem;
                    padding-inline-start: 5rem;
                    padding-inline-end: 5rem;
                }
@@ -58,7 +58,7 @@
                @include respond(mini-desktop) {
                    line-height: 6.8rem;
                    font-size: 6.8rem;
-                   margin-block-end: 1rem;
+                   margin-block-end: 3rem;
                }
            }
 
@@ -70,7 +70,7 @@
                width: fit-content;
 
                @include respond(mini-desktop) {
-                   margin-block-end: 1rem;
+                   margin-block-end: 3rem;
                    font-size: 3.5rem;
                    line-height: 3.5rem;
                    margin-block-end: 2.7rem;

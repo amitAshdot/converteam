@@ -20,6 +20,8 @@
 
 
         @include respond(mini-desktop) {
+            padding-block-start: 10rem;
+            padding-block-end: 10rem;
             position: relative;
             top: 0;
             right: 0;
@@ -37,7 +39,7 @@
         @include respond(mini-desktop) {
             line-height: 6.8rem;
             font-size: 6.8rem;
-            margin-block-end: 1rem;
+            margin-block-end: 3rem;
         }
     }
 
@@ -61,10 +63,19 @@
         flex-direction: column;
         color: $color-white;
 
+        @include respond(mini-desktop) {
+            gap: 3rem;
+        }
+
         &-image {
             width: 2rem;
             height: 2rem;
             align-self: center;
+
+            @include respond(mini-desktop) {
+                width: 8rem;
+                height: 8rem;
+            }
         }
 
         &-text {

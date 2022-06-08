@@ -3,5 +3,17 @@
         text-align: center;
         padding: 0;
         margin: 0;
+
+        @include respond(mini-desktop) {
+            margin-block-end: 4rem;
+        }
+
+        & p {
+            @include respond(mini-desktop) {
+                font-size: 4rem;
+                line-height: initial;
+            }
+        }
+
     }
 }

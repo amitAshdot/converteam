@@ -16,6 +16,8 @@
 
         @include respond(mini-desktop) {
             flex-direction: column;
+            padding-inline-start: 5rem;
+            padding-inline-end: 5rem;
         }
     }
 
@@ -61,6 +63,13 @@
         padding-block-end: 0;
         padding-inline-start: 1rem;
         padding-inline-end: 1rem;
+
+        @include respond(mini-desktop) {
+            width: 49%;
+            padding-inline-start: 0rem;
+            padding-inline-end: 0rem;
+        }
+
 
         &-image {
             align-self: center;
