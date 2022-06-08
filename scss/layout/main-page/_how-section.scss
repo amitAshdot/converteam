@@ -71,6 +71,7 @@
             width: 2rem;
             height: 2rem;
             align-self: center;
+            margin-block-start: 1rem;
 
             @include respond(mini-desktop) {
                 width: 8rem;
