@@ -36,6 +36,12 @@
             animation: moveInBottomFull 0.3s ease-in-out;
             transition: 0.3s all;
 
+            @include respond(mini-desktop) {
+                height: 10rem;
+                padding-inline-start: 10rem;
+                padding-inline-end: 10rem;
+            }
+
             &~.join-section {
                 margin-block-start: $top-section-height;
             }
