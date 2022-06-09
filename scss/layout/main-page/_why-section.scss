@@ -73,8 +73,8 @@
 
         &-image {
             align-self: center;
-            width: 2rem;
-            height: 3rem;
+            width: 2.5rem;
+            height: 2.5rem;
 
             @include respond(mini-desktop) {
                 width: 6rem;
