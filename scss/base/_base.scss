@@ -73,8 +73,9 @@ html {
 
 body {
   /* set the box size in all elements to border-box thanks to *{} */
+  position: relative;
   box-sizing: border-box;
-  // max-width: 1920px;
+  max-width: 1920px;
   margin-inline: auto;
 
   @include respond(tab-port) {
