@@ -47,6 +47,7 @@
         display: flex;
         align-items: start;
         // align-items: center;
+        margin-block-start: 1rem;
         gap: 1rem;
 
         @include respond(mini-desktop) {
@@ -71,7 +72,6 @@
             width: 3rem;
             height: 3rem;
             align-self: center;
-            margin-block-start: 1rem;
 
             @include respond(mini-desktop) {
                 width: 8rem;
