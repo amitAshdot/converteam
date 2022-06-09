@@ -10,7 +10,8 @@
         padding-inline-end: 7rem;
         overflow: visible;
         // border: 1px solid blue;
-
+        max-width: 1920px;
+        margin: auto;
 
         @include respond(mini-desktop) {
             padding-inline-start: 5rem;
@@ -21,11 +22,13 @@
 
     &-image-1 {
         position: absolute;
-        width: 26rem;
+        width: 48rem;
+        height: auto;
         top: -4rem;
-        right: -2rem;
+        right: -25rem;
         z-index: -1;
-        object-fit: contain;
+        object-fit: cover;
+        filter: grayscale(1);
     }
 
     &-container {
@@ -48,6 +51,7 @@
     &-form {
         padding-inline-start: 1rem;
         border-inline-start: 0.5rem solid $color-primary;
+        max-width: 1090px;
 
         &-inputs {
             display: flex;

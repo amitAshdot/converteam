@@ -12,12 +12,16 @@
         // border: 1px solid orangered;
 
         width: 86vw;
+        width: 86%;
         // height: 12.6vw;
         top: 22rem;
         right: 7vw;
         border-radius: 30px;
         background: $color-secondary;
 
+        @include respond(big-desktop-min) {
+            width: 86%;
+        }
 
         @include respond(mini-desktop) {
             padding-block-start: 10rem;

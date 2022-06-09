@@ -21,9 +21,9 @@ html {
   scroll-behavior: smooth;
 
   // font-size: 20px;
-  font-size: 0.1111vw;
+  // font-size: 0.1111vw;
   min-height: 0vw;
-
+  // max-width: 1920px;
   //so now rem = 10px -> easy to calculate margin/paddin/etc...
   // font-size: 62.5%;
 
@@ -34,10 +34,12 @@ html {
   @include respond(big-desktop-max) {
     // font-size: 121.8%; // 1rem = 19.5px, 19.5 / 16 = 75%
     font-size: 1.045vw;
+
     // font-size: calc(0.558036vw + 9.28571px);
   }
 
   @include respond(big-desktop-min) {
+    font-size: 16px;
     // font-size: 121.8%; // 1rem = 19.5px, 19.5 / 16 = 75%
   }
 
@@ -72,7 +74,7 @@ html {
 body {
   /* set the box size in all elements to border-box thanks to *{} */
   box-sizing: border-box;
-  max-width: 1920px;
+  // max-width: 1920px;
   margin-inline: auto;
 
   @include respond(tab-port) {
