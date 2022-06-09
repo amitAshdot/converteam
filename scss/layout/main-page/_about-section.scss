@@ -27,7 +27,7 @@
         text-align: right;
         line-height: 4.1rem;
         font-size: 4.1rem;
-        width: 57%;
+        // width: 57%;
         padding-inline-start: 1rem;
 
         @include respond(mini-desktop) {
@@ -45,6 +45,11 @@
 
     &-description {
         border-inline-end: 0.5rem solid $color-primary;
+        width: 84vw;
+
+        @include respond(mini-desktop) {
+            border-inline-end: 0;
+        }
     }
 
     &-text {
@@ -59,8 +64,6 @@
         @include respond(mini-desktop) {
             line-height: 5rem;
             font-size: 5rem;
-            border-inline-end: 0;
-            // margin-block-end: 1rem;
         }
     }
 }
