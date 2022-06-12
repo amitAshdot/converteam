@@ -217,7 +217,7 @@
 
         <div class="cta-container">
             <img src="./images/e.webp" alt="תמונת רקע" class="cta-image-1 cta-bg" width="521.656" height="717.781">
-            <form class="cta-form show-on-scroll" id="form" action="mail.php" method="post">
+            <form class="cta-form show-on-scroll" id="form" method="post">
                 <div class=" cta-form-inputs">
 
                     <input type="text" class="cta-input" placeholder="שם מלא" name="name" id="name">
@@ -259,12 +259,33 @@
     <script defer type="text/javascript" src="./js/formHandle.js"></script> -->
     <script defer type="text/javascript" src="./js/scripts.min.js"></script>
     <script defer type="text/javascript" src="./js/zepto.min.js"></script>
-    <!-- <script defer type="text/javascript" src="./js/jquery3.6.0noAjax.min.js"></script> -->
+    <!--<script defer type="text/javascript" src="./js/jquery3.6.0noAjax.min.js"></script>-->
+    <script defer type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+
     <!-- <script defer type="text/javascript" src="./dist/main.js"></script> -->
 
 
     <script>
         function moveTo(event) { window.scrollTo(0, document.body.scrollHeight); }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            $('#form').submit(function (e) {
+                e.preventDefault();
+                var data = $(this).serialize();
+                $.ajax({
+                    type: "POST",
+                    url: './mail.php',
+                    data: data,
+                    success: function (mail) {
+                        alert('הפרטים נשלחו בהצלחה');
+                        // window.location.href = 'thankyou.html';
+                    }
+                });
+
+            });
+        });
     </script>
 </body>
 
